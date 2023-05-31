@@ -48,14 +48,23 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ### Procedure
 /* write all the steps invloved */
 
-
-
-### PROGRAM 
-/*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:R.Dineshkumar.
+RegisterNumber: 212222050010
+
+### PROGRAM UC
+```module upcounter(clk,a);
+input clk;
+output reg[3:0]a;
+always@(posedge clk)
+begin
+a[3]=(a[2] & a[1] & a[0]) ^ a[3];
+a[2]=(a[1] & a[0]) ^ a[2];
+a[1]=(a[0] ^ a[1]);
+a[0]=1 ^ a[0];
+end
+endmodule
+```
 
 
 
@@ -63,6 +72,7 @@ RegisterNumber:
 
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+![uprtl](https://github.com/Dineshkumarr123/Exp-7-Synchornous-counters-/assets/130551452/bc4c9e8e-bfd9-4f87-90e9-77272e7c670c)
 
 
 
@@ -73,6 +83,46 @@ RegisterNumber:
 
 
 ### TIMING DIGRAMS FOR COUNTER  
+
+![uptd](https://github.com/Dineshkumarr123/Exp-7-Synchornous-counters-/assets/130551452/3f89e7b9-c088-4c1b-9a9f-f8af03445524)
+
+
+
+### PROGRAM DC
+```
+module downcounter(clk,a);
+input clk;
+output reg[3:0]a;
+always@(posedge clk)
+begin
+a[3]=(~a[2] & ~a[1] & ~a[0])^ a[3];
+a[2]=(~a[1] & ~a[0]) ^ a[2];
+a[1]=(~a[0] ^ a[1]);
+a[0]=1 ^ a[0];
+end
+endmodule
+```
+
+
+
+
+
+
+### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+
+
+![WhatsApp Image 2023-05-31 at 20 47 45](https://github.com/Dineshkumarr123/Exp-7-Synchornous-counters-/assets/130551452/240756f4-406f-4723-a14b-0387e729fc36)
+
+
+
+
+
+
+
+
+### TIMING DIGRAMS FOR COUNTER  
+
+![dctd](https://github.com/Dineshkumarr123/Exp-7-Synchornous-counters-/assets/130551452/84156915-7fc2-4ded-acf9-b870166712ea)
 
 
 
@@ -86,3 +136,7 @@ RegisterNumber:
 
 
 ### RESULTS 
+The synchoronous counters is verified
+
+
+
