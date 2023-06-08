@@ -46,11 +46,13 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
+write all the steps invloved 
+```
 
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by:R.Dineshkumar.
 RegisterNumber: 212222050010
+```
 
 ### PROGRAM UC
 ```module upcounter(clk,a);
